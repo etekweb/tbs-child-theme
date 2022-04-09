@@ -1,0 +1,354 @@
+/*
+Theme Name: Tech Startup (TBS Modified)
+Author: ThemeShopy (Modifications by Ethan Matzdorf)
+Author URI: https://www.themeshopy.com/
+Description: Tech Startup is an amazing theme based on WordPress that is great for startups and agencies that are dealing in the technical business domain. It has an innovative and professional design that is a perfect match for IT and tech startups, corporates, tech-savvies, web development agencies, and tech bloggers. The simple and adaptable design adjusts itself on different layouts giving a responsive design. As the design is based on the Bootstrap framework, it results in a robust WordPress theme giving a mobile-friendly as well as a user-friendly website that looks beautiful on any screen. The clean layout shows details in a minimalist way without any extra clutter on the screen drawing the entire attention of your target audience towards your main content. For making sure that you get noticed easily online and get more traffic, there are SEO-friendly codes in the core featuring you in the top ranks in SERP. The highly optimized codes also result in fast performance and fast page load time. To further enhance the interactive part of your website, this theme includes Call To Action Buttons (CTA) and stunning CSS animations. With plenty of personalization options and a WordPress customizer, you are free to do the changes in the layout and give it the desired look. Demo: https://www.themeshopy.com/tech-startup-pro/
+Tested up to: 5.9
+Requires PHP: 7.2
+Version: 0.1.7.1649536830
+license: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl.html
+Text Domain: tech-startup
+Template: advance-startup
+Tags: custom-background,custom-menu,custom-colors,custom-logo,editor-style,featured-images,full-width-template,footer-widgets,one-column,sticky-post,two-columns,theme-options,threaded-comments,right-sidebar,left-sidebar,grid-layout,three-columns,blog,e-commerce
+Updated: 2022-04-09 20:40:30
+*/
+
+body {
+  margin: auto !important;
+}
+
+p {
+  line-height: unset;
+}
+
+ul {
+  padding: 0 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input.search-field {
+  padding: 10px !important;
+}
+
+input[type="submit"] {
+  padding: 10px 30px !important;
+}
+
+.top-header,
+.talk-btn a,
+.primary-navigation li a:hover,
+.primary-navigation li:hover a,
+.primary-navigation li a:focus,
+.primary-navigation li:focus a,
+#slider .carousel-control-next-icon i,
+#slider .carousel-control-prev-icon i,
+#slider .inner_carousel .readbtn a,
+#we_provide .theme_button a,
+.read-more-btn a,
+#sidebar .tagcloud a:hover,
+#footer input[type="submit"],
+#footer .tagcloud a:hover,
+.tags p a:hover,
+.woocommerce span.onsale,
+input[type="submit"],
+#comments a.comment-reply-link,
+.read-moresec a:hover {
+  background: #ffd64e;
+}
+
+#we_provide h2:before,
+#sidebar ul li:hover:before,
+nav.woocommerce-MyAccount-navigation ul li,
+#comments input[type="submit"].submit {
+  background: #ffd64e !important;
+}
+
+.new-text h2 a,
+.metabox i,
+.metabox span a:hover,
+#sidebar .textwidget a,
+#sidebar ul li:hover,
+#sidebar ul li:hover a,
+#sidebar ul li:active,
+#sidebar ul li:focus,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.tags i,
+.tags p a,
+.meta-nav,
+#comments a time {
+  color: #ffd64e;
+}
+
+.tags p a,
+.tags p a:hover,
+.woocommerce-message,
+#footer input[type="search"],
+.read-moresec a {
+  border-color: #ffd64e;
+}
+
+#we_provide .theme_button a:hover,
+.read-more-btn a:hover,
+.talk-btn a:hover,
+#sidebar input[type="submit"]:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background: #799f0c;
+}
+
+.woocommerce a.button:hover {
+  background: #799f0c !important;
+}
+
+.logo h1 a,
+.logo p a,
+.logo p,
+.top-header p,
+.social-icons i,
+.talk-btn a,
+.primary-navigation li a:hover,
+.primary-navigation li:hover a,
+.primary-navigation li a:focus,
+.primary-navigation li:focus a,
+#slider .inner_carousel .readbtn a,
+#sidebar .tagcloud a:hover,
+nav.woocommerce-MyAccount-navigation ul li a,
+input[type="submit"],
+.sf-arrows .sf-with-ul:after,
+.read-moresec a {
+  color: #000 !important;
+}
+
+.contact-info-box a,
+.contact-info-box p,
+.contact-info-box i {
+  color: #707070 !important;
+}
+
+.contact-info-box a:hover {
+  color: #ffd64e !important;
+}
+
+.talk-btn a:hover {
+  color: #fff !important;
+}
+
+.social-icons i:hover {
+  color: #799f0c !important;
+}
+
+.contact-info-box i {
+  font-size: 35px;
+}
+
+.talk-btn a,
+#we_provide .theme_button a,
+.read-more-btn a,
+#we_provide .theme_button a:hover,
+.read-more-btn a:hover,
+#header-top {
+  border: none;
+}
+
+.page-template-custom-front-page .main-menu .menu-color {
+  background: linear-gradient(90deg, #fff 94%, #ffd64e 75%);
+
+  box-shadow: 0 0 20px 0px #9c9c9c;
+
+  padding: 5px 0;
+}
+
+#header-top {
+  background: transparent;
+}
+
+.border-side {
+  border-right: solid 2px #707070;
+}
+
+.main-menu {
+  border-top: 1px solid #000;
+}
+
+.search-box {
+  text-align: center;
+}
+
+.search-box i {
+  font-size: 22px;
+}
+
+.primary-navigation a {
+  font-weight: normal;
+
+  padding: 10px 15px;
+}
+
+.primary-navigation ul ul li:first-child {
+  border-top: 6px solid #799f0c;
+}
+
+.fixed-header {
+  position: static !important;
+
+  box-shadow: none !important;
+}
+
+.contact-info-box p {
+  font-size: 16px;
+}
+
+.contact-info-box a,
+.location-text {
+  font-size: 14px !important;
+}
+
+#sidebar .textwidget a,
+#footer .textwidget a,
+.entry-content a {
+  text-decoration: underline !important;
+
+  color: #ffd64e;
+}
+
+/*--------Home Page--------------*/
+
+.page-template-custom-front-page #header-top {
+  position: static;
+
+  background: transparent;
+}
+
+.page-template-custom-front-page #header {
+  display: block;
+}
+
+.page-template-custom-front-page .main-menu {
+  position: absolute;
+
+  width: 100%;
+
+  top: auto;
+
+  margin-top: -15px;
+}
+
+#footer li a:hover {
+  color: #ffd64e;
+}
+
+/*--------Slider--------------*/
+
+#slider .carousel-item,
+#menu-sidebar {
+  background-image: linear-gradient(130deg, #ffe000 40%, #799f0c 77%);
+}
+
+#slider .carousel-control-prev,
+#slider .carousel-control-next {
+  width: 15%;
+}
+
+#slider .carousel-control-next-icon i,
+#slider .carousel-control-prev-icon i {
+  color: #000;
+
+  border-radius: 50%;
+
+  padding: 16px 20px;
+
+  box-shadow: 0 0 10px 0px #9c9c9c;
+}
+
+#slider .carousel-caption {
+  bottom: 50%;
+}
+
+#slider .inner_carousel .readbtn a {
+  border: none;
+}
+
+#slider .inner_carousel .readbtn a:hover {
+  background: #fff !important;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  border-color: #799f0c;
+}
+
+.woocommerce a.added_to_cart {
+  display: block;
+}
+
+/*--------media--------------*/
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .border-side {
+    border-right: none;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  .main-btn {
+    text-align: right;
+  }
+
+  .contact-info-box a,
+  .location-text {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .top-header,
+  .header-nav .main-menu {
+    display: block;
+  }
+
+  #header .nav ul.sub-menu li a,
+  #header .nav ul li a {
+    color: #000 !important;
+  }
+
+  .side-menu {
+    background-image: linear-gradient(130deg, #ffe000 40%, #799f0c 77%);
+  }
+
+  .page-template-custom-front-page .main-menu .menu-color {
+    background: linear-gradient(90deg, #fff 94%, #ffd64e 75%);
+
+    box-shadow: none;
+  }
+
+  .page-template-custom-front-page .main-menu {
+    position: static;
+
+    background: transparent;
+
+    border-bottom: 1px solid #000;
+
+    border-top: 1px solid #000;
+  }
+}
