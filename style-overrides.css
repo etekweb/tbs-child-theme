@@ -1,0 +1,40 @@
+/* Custom "submit a ticket" button */
+/* Navigation bar button */
+#menu-main-menu > .menu-item:last-child {
+	color: #000 !important;
+	background: #ffd64e;
+	border-radius: 32px;
+	outline: 1px solid #ffd64e;
+}
+#menu-main-menu > .menu-item:last-child:hover,
+#menu-main-menu > .menu-item:last-child a:hover {
+	background-color: #fff;
+}
+#menu-main-menu > .menu-item:last-child a {
+	border-radius: 32px;
+}
+/* Contact page button */
+.ticket-btn a {
+	border-color: #ffd64e;
+	text-decoration: none !important;
+	text-transform: uppercase;
+/* 	font-weight: normal; */
+	letter-spacing: 1px;
+}
+
+/* Keep footer at bottom of page */
+body {
+	min-height: 100vh;
+}
+body{ 
+  display:flex; 
+  flex-direction:column;
+}
+#maincontent {
+	width: 100%;
+}
+
+footer{
+  margin-top:auto; 
+}
+
