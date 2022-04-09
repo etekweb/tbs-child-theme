@@ -38,6 +38,77 @@ footer{
   margin-top:auto; 
 }
 
+/* Disable load animation for real this time */
+#loader-wrapper {
+	display: none;
+}
+
+/* Hide extra stuff in "posts" */
+.single-post .box-img,
+.single-post .metabox,
+.single-post .post-navigation,
+.single-post #sidebar,
+.single-post #comments {
+	display: none;
+}
+.single-post .related-box {
+	height: 100%;
+}
+#maincontent {
+	margin-bottom: 4rem;
+}
+#maincontent #content {
+	margin-top: 0;
+}
+#maincontent > .row > .col-lg-8,
+#maincontent > .row > .col-md-8 {
+	width: 100%;
+}
+
+/* Avoid capitalized articles in headings */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none !important;
+}
+
+/* Disable search */
+.menu-color {
+	background: #fff !important;
+	height: 70px;
+}
+.menu-color > .row {
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.menu-color > .row > .col-lg-11 {
+	width: unset;
+}
+.menu-color > .row > .col-lg-1 {
+	width: 0;
+	display: none;
+}
+.search-box {
+	display: none;
+}
+
+/* Menu button text on mobile */
+.mobiletoggle {
+	border: 1px solid black !important;
+}
+.mobiletoggle:after {
+	padding-left: 8px;
+	padding-right: 7px;
+	content: "Main Menu";
+}
+.wp-block-navigation__responsive-container-open {
+	border: 1px solid black;
+	padding: 4px 6px 4px 4px;
+}
+.wp-block-navigation__responsive-container-open:after {
+	padding-left: 4px;
+	content: "Menu"
+}
+
 /* New topbar contact info area */
 #header-top > .container > .row {
     justify-content: space-between;
@@ -50,4 +121,43 @@ footer{
     height: unset;
     max-width: 200px;
     max-height: 200px;
+}
+
+/* Disable gradient on slideshow */
+#slider .carousel-item, #menu-sidebar {
+    background-image: unset;
+}
+
+/* Fix centering of slider on desktop */
+#slider .carousel-caption {
+    bottom: 31%;
+}
+/* Show slider on mobile too */
+@media screen and (max-width: 575px) {
+	#slider {
+    display: unset;
+	}
+	.carousel-control-prev, .carousel-control-next {
+		display: none;
+	}
+	#slider .inner_carousel .readbtn {
+		margin-top: 48px;
+		display: none;
+	}
+	#slider .carousel-caption {
+		height: 100%;
+    display: flex;
+    align-items: center;
+		bottom: 1.25rem;
+	}
+	#slider .carousel-caption .inner_carousel {
+		width: 100%;
+	}
+	.carousel-caption h1 {
+		display: unset !important;
+		font-size: 24px !important;
+	}
+	#we_provide {
+		padding-top: 8px !important;
+	}
 }
