@@ -115,6 +115,7 @@ function tech_startup_enqueue_styles() {
 	$parent_style = 'advance-startup-basic-style'; // Style handle of parent theme.
 	wp_enqueue_style( $parent_style, esc_url(get_template_directory_uri()) . '/style.css' );
 	wp_enqueue_style( 'tech-startup-style', get_stylesheet_uri(), array( $parent_style ) );
+	wp_enqueue_style( 'tech-startup-modified-style', get_stylesheet_directory_uri() . '/style-overrides.css');
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
