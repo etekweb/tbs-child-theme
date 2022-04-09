@@ -38,3 +38,16 @@ footer{
   margin-top:auto; 
 }
 
+/* New topbar contact info area */
+#header-top > .container > .row {
+    justify-content: space-between;
+}
+.new-contact-info {
+    text-align: right;
+}
+.custom-logo {
+    width: unset;
+    height: unset;
+    max-width: 200px;
+    max-height: 200px;
+}

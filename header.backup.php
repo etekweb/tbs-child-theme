@@ -89,14 +89,57 @@
               <?php endif; ?>
             </div>
           </div>
-          
-          <div class="col-lg-3 col-md-3 align-self-center new-contact-info">
-            Current customer?<br>
-            (phone number)<br>
-            (email address)<br>
-            <button>Log into client portal</button>
+          <div class="col-lg-7 col-md-6 align-self-center contact-info-box">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 align-self-center border-side">
+                <?php if( get_theme_mod('tech_startup_location_text') != '' || get_theme_mod('tech_startup_location') != ''){ ?>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 align-self-center">
+                      <i class="fas fa-map-marker-alt me-2"></i>
+                    </div>
+                    <div class="col-lg-9 col-md-12 align-self-center">
+                      <p class="mb-0"><?php echo esc_html( get_theme_mod('tech_startup_location_text','')); ?></p>
+                      <p class="mb-0 location-text"><?php echo esc_html( get_theme_mod('tech_startup_location','')); ?></p>
+                    </div>
+                  </div>
+                <?php } ?>
+              </div>
+              <div class="col-lg-4 col-md-4 align-self-center border-side">
+                <?php if( get_theme_mod('advance_startup_phone1') != '' || get_theme_mod('tech_startup_phone_text') != ''){ ?>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 align-self-center">
+                      <i class="fas fa-phone me-2"></i>
+                    </div>
+                    <div class="col-lg-9 col-md-12 align-self-center">
+                      <p class="mb-0"><?php echo esc_html( get_theme_mod('tech_startup_phone_text','')); ?></p>
+                      <a href="tel:<?php echo esc_attr( get_theme_mod('advance_startup_phone1','' )); ?>"><?php echo esc_html( get_theme_mod('advance_startup_phone1','' )); ?><span class="screen-reader-text"><i class="fas fa-phone"></i><?php echo esc_html( get_theme_mod('advance_startup_phone1','' )); ?></span></a>
+                    </div>
+                  </div>
+                <?php } ?>
+              </div>
+              <div class="col-lg-4 col-md-4 align-self-center">
+                <?php if( get_theme_mod('advance_startup_mail1') != '' || get_theme_mod('tech_startup_email_text') != ''){ ?>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 align-self-center">
+                      <i class="fas fa-envelope me-2"></i>
+                    </div>
+                    <div class="col-lg-9 col-md-12 align-self-center">
+                      <p class="mb-0"><?php echo esc_html( get_theme_mod('tech_startup_email_text','')); ?></p>
+                      <a href="mailto:<?php echo esc_attr( get_theme_mod('advance_startup_mail1','') ); ?>"><?php echo esc_html( get_theme_mod('advance_startup_mail1','')); ?><span class="screen-reader-text"><i class="fas fa-envelope"></i><?php echo esc_html( get_theme_mod('advance_startup_mail1','')); ?></span></a>
+                    </div>
+                  </div>
+                <?php } ?>
+              </div>
+            </div>
           </div>
 
+          <div class="col-3 align-self-center main-btn">
+            <div class="talk-btn my-4 mx-0 text-lg-end align-self-center">
+              <?php if ( get_theme_mod('advance_startup_top_button_text','') != "" ) {?>
+                <a href="<?php echo esc_html(get_theme_mod('advance_startup_top_button_url')); ?>" class="p-3"><?php echo esc_html(get_theme_mod('advance_startup_top_button_text','')); ?><i class="fas fa-angle-right ms-2"></i><span class="screen-reader-text"><?php esc_html_e( 'Button','tech-startup' );?></span></a>
+              <?php }?>
+            </div>
+          </div>
         </div>
       </div>
     </div>
