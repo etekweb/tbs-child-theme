@@ -99,7 +99,7 @@ get_header(); ?>
 
   <?php if( get_theme_mod('tbs-logo1') != '' || get_theme_mod('tbs-logo2') != '' || get_theme_mod('tbs-logo3') != '' || get_theme_mod('tbs-logo4') != '' ){ ?>
     <section id="partners" class="py-5 px-0 text-center">
-      <h2>Partners</h2>
+      <!-- <h2>Partners</h2> -->
       <?php if( get_theme_mod('tbs-logo1') != ''){ ?>
         <img src="<?php echo esc_url( $feature1 ); ?>" alt="<?php echo esc_html( $image1_alt ); ?>">
       <?php }?>
