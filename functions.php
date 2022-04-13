@@ -122,6 +122,10 @@ function tech_startup_enqueue_styles() {
 	}
 }
 
+function tbs_sanitize_phone_number( $phone ) {
+	return preg_replace( '/[^\d+ ()-]/', '', $phone );
+}
+
 function tech_startup_customize_register() {     
 	global $wp_customize;
 	$wp_customize->remove_section( 'advance_startup_theme_color_option' );
@@ -145,7 +149,7 @@ add_action( 'customize_register', 'tech_startup_customize_register', 11 );
 
 // Customizer Section
 function tech_startup_customizer ( $wp_customize ) {
-
+	
 	$wp_customize->add_setting('tech_startup_tob_bar_info_text',array(
 		'default'	=> '',
 		'sanitize_callback'	=> 'sanitize_text_field'
@@ -157,51 +161,21 @@ function tech_startup_customizer ( $wp_customize ) {
 		'type'	=> 'text',
 	));
 
-	$wp_customize->add_setting('tech_startup_location_text',array(
+	$wp_customize->remove_setting('advance_startup_phone1');
+	$wp_customize->remove_control('advance_startup_phone1');
+	$wp_customize->add_setting('tbs_phone1',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
+		'sanitize_callback'	=> 'tbs_sanitize_phone_number',
 	));
-	$wp_customize->add_control('tech_startup_location_text',array(
-		'label'	=> __('Location Text','tech-startup'),
+	$wp_customize->add_control('tbs_phone1',array(
+		'label'	=> __('Phone Number','advance-startup'),
 		'section'	=> 'advance_startup_topbar',
-		'setting'	=> 'tech_startup_location_text',
-		'type'	=> 'text',
+		'setting'	=> 'tbs_phone1',
+		'type'	=> 'text'
 	));
 
-	$wp_customize->add_setting('tech_startup_location',array(
-		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('tech_startup_location',array(
-		'label'	=> __('Location','tech-startup'),
-		'section'	=> 'advance_startup_topbar',
-		'setting'	=> 'tech_startup_location',
-		'type'	=> 'text',
-	));
-
-	$wp_customize->add_setting('tech_startup_email_text',array(
-		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('tech_startup_email_text',array(
-		'label'	=> __('Mail Address Text','tech-startup'),
-		'section'	=> 'advance_startup_topbar',
-		'setting'	=> 'tech_startup_email_text',
-		'type'	=> 'text',
-	));
-
-	$wp_customize->add_setting('tech_startup_phone_text',array(
-		'default'	=> '',
-		'sanitize_callback'	=> 'sanitize_text_field'
-	));
-	$wp_customize->add_control('tech_startup_phone_text',array(
-		'label'	=> __('Phone Number Text','tech-startup'),
-		'section'	=> 'advance_startup_topbar',
-		'setting'	=> 'tech_startup_phone_text',
-		'type'	=> 'text',
-	));
 }
-add_action( 'customize_register', 'tech_startup_customizer' );
+add_action( 'customize_register', 'tech_startup_customizer', 11 );
 
 if ( ! defined( 'PRO_THEME_LINK' ) ) {
 	define( 'PRO_THEME_LINK',__('https://www.themeshopy.com/themes/tech-startup-wordpress-theme/','tech-startup') );
@@ -252,3 +226,12 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+// function console_log($output, $with_script_tags = true) {
+//     $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
+// ');';
+//     if ($with_script_tags) {
+//         $js_code = '<script>' . $js_code . '</script>';
+//     }
+//     echo $js_code;
+// }

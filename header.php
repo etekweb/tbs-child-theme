@@ -61,8 +61,8 @@
     <?php } ?>
     <div id="header-top" class="py-3 px-0 text-center text-md-start">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 align-self-center">
+        <div class="flex-space-between">
+          <div>
             <div class="logo py-2 px-0 align-self-center">
               <?php if ( has_custom_logo() ) : ?>
                 <div class="site-logo"><?php the_custom_logo(); ?></div>
@@ -90,11 +90,40 @@
             </div>
           </div>
           
-          <div class="col-lg-3 col-md-3 align-self-center new-contact-info">
+          <div class="new-contact-info">
             Current customer?<br>
-            (phone number)<br>
-            (email address)<br>
-            <button>Log into client portal</button>
+            <?php if( get_theme_mod('tbs_phone1') != ''){ ?>
+              <i class="fas fa-phone"></i>
+              <a href="tel:<?php echo esc_attr( get_theme_mod('tbs_phone1','' )); ?>">
+                <?php echo esc_html( get_theme_mod('tbs_phone1','' )); ?>
+                <span class="screen-reader-text">
+                  <i class="fas fa-phone"></i>
+                  <?php echo esc_html( get_theme_mod('tbs_phone1','' )); ?>
+                </span>
+              </a>
+              <br>
+            <?php } ?>
+            <?php if( get_theme_mod('advance_startup_mail1') != ''){ ?>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:<?php echo esc_attr( get_theme_mod('advance_startup_mail1','' )); ?>">
+                <?php echo esc_html( get_theme_mod('advance_startup_mail1','' )); ?>
+                <span class="screen-reader-text">
+                  <i class="fas fa-envelope"></i>
+                  <?php echo esc_html( get_theme_mod('advance_startup_mail1','' )); ?>
+                </span>
+              </a>
+              <br>
+            <?php } ?>
+            <?php if ( get_theme_mod('advance_startup_top_button_text','') != "" ) {?>
+              <a 
+                href="<?php echo esc_html(get_theme_mod('advance_startup_top_button_url')); ?>"
+                class="top-btn wp-block-button__link has-black-color has-text-color has-background"
+              >
+                <?php echo esc_html(get_theme_mod('advance_startup_top_button_text','')); ?>
+                <!-- <i class="fas fa-angle-right ms-2"></i> -->
+                <span class="screen-reader-text"><?php esc_html_e( 'Button','tech-startup' );?></span>
+              </a>
+            <?php }?>
           </div>
 
         </div>
