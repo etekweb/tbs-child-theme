@@ -205,6 +205,12 @@ h6 {
   }
 }
 
+/* Partner logos on homepage */
+#partners img {
+  height: 100px;
+  margin: 0 32px;
+}
+
 /* Color overrides */
 .top-header,
 .talk-btn a,
@@ -256,8 +262,10 @@ h6,
   color: rgb(60, 60, 60);
 }
 
-#we_provide h2 {
+#we_provide h2,
+#partners h2 {
   color: rgb(60, 60, 60);
+  font-weight: 600;
 }
 
 #slider .inner_carousel .readbtn a:hover {

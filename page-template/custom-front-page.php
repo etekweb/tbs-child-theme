@@ -71,6 +71,62 @@ get_header(); ?>
 
   <?php do_action( 'advance_startup_below_slider' ); ?>
 
+  <?php 
+    // Logo image URLs
+    $feature1 = get_theme_mod('tbs-logo1');
+    $feature2 = get_theme_mod('tbs-logo2');
+    $feature3 = get_theme_mod('tbs-logo3');
+    $feature4 = get_theme_mod('tbs-logo4');
+
+    // Post ids and alt text respectively
+    if ($feature1 != '') {
+      $feature1_id = attachment_url_to_postid($feature1);
+      $image1_alt = get_post_meta( $feature1_id, '_wp_attachment_image_alt', true );
+    }
+    if ($feature2 != '') {
+      $feature2_id = attachment_url_to_postid($feature2);
+      $image2_alt = get_post_meta( $feature2_id, '_wp_attachment_image_alt', true );
+    }
+    if ($feature3 != '') {
+    $feature3_id = attachment_url_to_postid($feature3);
+    $image3_alt = get_post_meta( $feature3_id, '_wp_attachment_image_alt', true );
+    }
+    if ($feature4 != '') {
+      $feature4_id = attachment_url_to_postid($feature4);
+      $image4_alt = get_post_meta( $feature4_id, '_wp_attachment_image_alt', true );
+    }
+  ?>
+
+  <?php if( get_theme_mod('tbs-logo1') != '' || get_theme_mod('tbs-logo2') != '' || get_theme_mod('tbs-logo3') != '' || get_theme_mod('tbs-logo4') != '' ){ ?>
+    <section id="partners" class="py-5 px-0 text-center">
+      <h2>Partners</h2>
+      <?php if( get_theme_mod('tbs-logo1') != ''){ ?>
+        <img src="<?php echo esc_url( $feature1 ); ?>" alt="<?php echo esc_html( $image1_alt ); ?>">
+      <?php }?>
+      <?php if( get_theme_mod('tbs-logo2') != ''){ ?>
+        <img src="<?php echo esc_url( $feature2 ); ?>" alt="<?php echo esc_html( $image2_alt ); ?>">
+      <?php }?>
+      <?php if( get_theme_mod('tbs-logo3') != ''){ ?>
+        <img src="<?php echo esc_url( $feature3 ); ?>" alt="<?php echo esc_html( $image3_alt ); ?>">
+      <?php }?>
+      <?php if( get_theme_mod('tbs-logo4') != ''){ ?>
+        <img src="<?php echo esc_url( $feature4 ); ?>" alt="<?php echo esc_html( $image4_alt ); ?>">
+      <?php }?>
+      <?php if( get_theme_mod('tbs-partners-page') != ''){ ?>
+        <div class="read-more-btn">
+          <a href="<?php echo get_permalink( get_theme_mod ( 'tbs-partners-page' ) ); ?>">
+            SEE ALL PARTNERS
+            <i class="fas fa-angle-right ms-2"></i>
+            <span class="screen-reader-text">
+              SEE ALL PARTNERS
+              <i class="fas fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
+      <?php } ?>
+    </section>
+  <?php } ?>
+
   <?php do_action( 'advance_startup_above_we_provide_section' ); ?>
 
   <?php if( get_theme_mod('advance_startup_title') != '' || get_theme_mod( 'advance_startup_we_provide_category' )!= ''){ ?>

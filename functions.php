@@ -174,6 +174,63 @@ function tech_startup_customizer ( $wp_customize ) {
 		'type'	=> 'text'
 	));
 
+	// Partners
+	$wp_customize->add_section('tbs_partners',array(
+		'title'	=> __('Partners','advance-startup'),
+		'description'	=> __('Update partner images','advance-startup'),
+		'priority'	=> null,
+		'panel' => 'advance_startup_panel_id',
+	));
+	$wp_customize->add_setting('tbs-logo1', array(
+        'transport'     => 'refresh',
+        'height'        => 180,
+        'width'        => 160,
+    ));
+    $wp_customize->add_setting('tbs-logo2', array(
+        'transport'     => 'refresh',
+        'height'        => 180,
+        'width'        => 160,
+    ));
+    $wp_customize->add_setting('tbs-logo3', array(
+        'transport'     => 'refresh',
+        'height'        => 180,
+        'width'        => 160,
+    ));
+    $wp_customize->add_setting('tbs-logo4', array(
+        'transport'     => 'refresh',
+        'height'        => 180,
+        'width'        => 160,
+    ));
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'tbs-logo1', array(
+        'label'             => __('Logo 1', 'tbs-child-theme'),
+        'section'           => 'tbs_partners',
+        'settings'          => 'tbs-logo1',    
+    )));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'tbs-logo2', array(
+        'label'             => __('Logo 2', 'tbs-child-theme'),
+        'section'           => 'tbs_partners',
+        'settings'          => 'tbs-logo2',
+    ))); 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'tbs-logo3', array(
+        'label'             => __('Logo 3', 'tbs-child-theme'),
+        'section'           => 'tbs_partners',
+        'settings'          => 'tbs-logo3',    
+    )));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'tbs-logo4', array(
+        'label'             => __('Logo 4', 'tbs-child-theme'),
+        'section'           => 'tbs_partners',
+        'settings'          => 'tbs-logo4',
+    ))); 
+    $wp_customize->add_setting( 'tbs-partners-page', array(
+		'default' => '',
+	));
+	$wp_customize->add_control( 'tbs-partners-page', array(
+		'label' => 'Select Partners Page',
+		'type'  => 'dropdown-pages',
+		'section' => 'tbs_partners',
+		'settings' => 'tbs-partners-page'
+	));
+
 }
 add_action( 'customize_register', 'tech_startup_customizer', 11 );
 
