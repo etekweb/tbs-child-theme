@@ -317,7 +317,7 @@ nav.woocommerce-MyAccount-navigation ul li,
 @media screen and (max-width: 1000px) {
   .side-menu {
     background-image: unset;
-    background-color: #fff;
+    background-color: rgb(15 15 15);
   }
   .menu-item {
     background-color: rgb(90, 90, 90);
