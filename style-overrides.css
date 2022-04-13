@@ -354,3 +354,7 @@ nav.woocommerce-MyAccount-navigation ul li,
 #footer a {
   color: #fff;
 }
+
+.readbtn a {
+  box-shadow: 0 0 10px 0px #9c9c9c;
+}
