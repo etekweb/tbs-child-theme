@@ -335,7 +335,8 @@ nav.woocommerce-MyAccount-navigation ul li,
   .menu-item {
     background-color: rgb(90, 90, 90);
   }
-  #header .nav ul.sub-menu li a, #header .nav ul li a {
+  #header .nav ul.sub-menu li a,
+  #header .nav ul li a {
     color: #fff !important;
   }
   .side-menu .closebtn {
@@ -362,4 +363,56 @@ nav.woocommerce-MyAccount-navigation ul li,
 
 .readbtn a {
   box-shadow: 0 0 10px 0px #9c9c9c;
+}
+
+/* NEW CHANGES 4/20/2022 */
+
+/* Uniform navbar across whole site */
+.page-template-custom-front-page .main-menu {
+  position: unset;
+  width: unset;
+  top: unset;
+  margin-top: unset;
+}
+.page-template-custom-front-page .main-menu {
+  z-index: unset;
+  border: none;
+  margin-top: unset;
+  position: unset;
+  padding: unset;
+  margin-bottom: unset;
+}
+.page-template-custom-front-page .main-menu,
+.main-menu {
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
+  border: none;
+}
+.page-template-custom-front-page .main-menu .menu-color {
+  background: unset;
+  box-shadow: unset;
+  padding: unset;
+}
+/* Increase navbar font size */
+.primary-navigation a {
+  font-size: 14px;
+}
+/* Remove +/- on collapsible menus */
+.sf-arrows .sf-with-ul:after,
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows .sfHover > .sf-with-ul:after {
+  content: unset;
+  position: unset;
+  height: 0;
+  width: 0;
+  border-top-color: unset;
+  font-weight: 600;
+  margin-top: 0px;
+  font-size: 10px;
+  padding: 0;
+  right: unset;
+}
+.sf-arrows .sf-with-ul {
+  padding-right: 15px;
 }
