@@ -396,6 +396,8 @@ nav.woocommerce-MyAccount-navigation ul li,
 /* Increase navbar font size */
 .primary-navigation a {
   font-size: 14px;
+  font-weight: 600; /* originally was 400 */
+  color: #212529;
 }
 /* Remove +/- on collapsible menus */
 .sf-arrows .sf-with-ul:after,
