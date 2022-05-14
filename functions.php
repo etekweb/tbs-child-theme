@@ -120,6 +120,9 @@ function tech_startup_enqueue_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Fix issue with theme menus on Android devices
+	wp_enqueue_script( 'jquery-hoverIntent', esc_url(plugin_dir_url('tbs-theme-mods')) . 'tbs-theme-mods/jquery.hoverIntent.js', array('jquery') ,'',true);
 }
 
 function tbs_sanitize_phone_number( $phone ) {
