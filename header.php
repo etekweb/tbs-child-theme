@@ -65,7 +65,14 @@
           <div>
             <div class="logo py-2 px-0 align-self-center">
               <?php if ( has_custom_logo() ) : ?>
-                <div class="site-logo"><?php the_custom_logo(); ?></div>
+                <div class="site-logo">
+                <img 
+                  src="<?php echo get_site_url() ?>/wp-content/themes/tbs-child-theme/logo1x.png" 
+                  srcset="<?php echo get_site_url() ?>/wp-content/themes/tbs-child-theme/logo2x.png 2x"
+                  class="custom-logo" 
+                  alt="Tech Based Solutions logo" 
+                >
+                </div>
               <?php endif; ?>
               <?php $blog_info = get_bloginfo( 'name' ); ?>
               <?php if ( ! empty( $blog_info ) ) : ?>

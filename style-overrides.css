@@ -141,10 +141,10 @@ h6 {
   text-align: right;
 }
 .custom-logo {
-  width: unset !important;
-  height: unset !important;
-  max-width: unset !important;
-  max-height: 98px !important;
+  max-width: 100% !important;
+  width: 273px !important;
+  height: auto !important;
+  max-height: unset !important;
 }
 
 /* Disable gradient on slideshow */
